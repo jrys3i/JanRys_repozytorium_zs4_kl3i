@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //zadanie 1
+        const l1 = prompt ('Podaj liczbę pierwszą');
+        const l2 = prompt ('Podaj liczbę drugą');
+        const l3 = prompt ('Podaj liczbę trzecią');
+
+           // document.write ('<div>Wartości zmiennych to:</div>');
+            //document.write ('<div>Liczba 1 ='+ l1 +',liczba 2 ='+ l2 +',liczba 3 ='+l3+' :</div>');
+
+            document.write (`<div>Liczba 1 =${l1},liczba 2 = ${l2},liczba 3 = ${l3}</div>`);
+        
+            //zadanie 2
+            const r = prompt('Podaj r' );
+            let pole = 0;
+            let obwd = 0;
+            pole = 3.14*r*r;
+            obwd = 2*3.14*r;
+            document.write(`<div>Pole wynosi ${pole}, Obwód wynosi ${obwd}`);
+
+            //zadanie 3
+                const trasa = prompt('Podaj trase' );
+                const paliwo = prompt('Podaj cene paliwa' );
+                const zurzywa = prompt('podaj ile samochod zurzyl paliwa na 100km ');
+                let wynik = 0;
+                wynik = (trasa/zurzywa)*paliwo;
+                document.write(`<div>Cena to: ${wynik}</div>`)
+    </script>
+</body>
+</html>
