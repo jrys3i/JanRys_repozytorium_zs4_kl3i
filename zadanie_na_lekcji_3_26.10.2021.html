@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input tpye="text" name="pole"/>
+        <button type="submit">Pokaż</button>
+    </form>
+    <div class="wynik"></div>    
+
+    <script>
+        const formularz = document.querySelector('form');
+        const wynik=document.querySelector('.wynik');
+        formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            
+             const polewformularzu=document.querySelector('input[name="pole"]').value;
+        
+            wynik.textContent=polewformularzu;
+
+
+                if(polewformularzu ==1){
+                    wynik.textContent= 'Jest poniedzialek';
+                }
+                else if(polewformularzu ==2){    
+                    wynik.textContent='Jest wtorek';
+                }
+                else if(polewformularzu ==3){    
+                    wynik.textContent='Jest sroda';
+                }
+                else if(polewformularzu ==4){    
+                    wynik.textContent='Jest czwartek';
+                }
+                else if(polewformularzu ==5){    
+                    wynik.textContent='Jest piatek';
+                }
+                else if(polewformularzu ==6){    
+                    wynik.textContent='Jest sobota';
+                }
+                else if(polewformularzu ==7){    
+                    wynik.textContent='Jest niedziela';
+                }
+                else{
+                    wynik.textContent='BLAD'
+                }
+
+            
+        });
+
+
+
+
+    </script>
+
+
+
+
+</body>
+</html>
