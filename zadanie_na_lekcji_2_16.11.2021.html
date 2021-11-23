@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="a">
+        <input type="text" name="b">
+        <button type="submit">Sprawdź</button>
+    </form>
+    <div class="a"></div>
+    
+    <script>
+        const formularz = document.querySelector('form');
+        const g = document.querySelector('.a');
+        
+        formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+           
+            let c = 0;
+            for(let i=a; i <= b; i++)
+            {
+                if(i%5==0)
+                {
+                  c++;  
+                }
+                
+            }
+            
+            
+            g.textContent = "Liczby podzielne przez 5 to: " + c;
+              
+        });
+    </script>
+</body>
+</html>
