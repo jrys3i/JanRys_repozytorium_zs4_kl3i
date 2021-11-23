@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" name="n">
+        <button type="submit">Sprawdź</button>
+    </form>
+    <div class="parzysta"></div>
+    <div class="nieparzysta"></div>
+    <script>
+        const formularz = document.querySelector('form');
+        const parzysta = document.querySelector('.parzysta');
+        const nieparzysta = document.querySelector('.nieparzysta');
+        formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            let n = document.querySelector('input[name="n"]').value;
+            let b = 0;
+            let a = 0;
+            for(let i=1; i <= n; i++)
+            {
+                if(i%2==0)
+                {
+                  b++;  
+                }
+                else
+                {
+                    a++
+                }
+            }
+            
+            
+            parzysta.textContent = "Liczb parzystych jest: " + b;
+            nieparzysta.textContent = "Liczb nieparzystych jest: " +  a;  
+        });
+    </script>
+</body>
+</html>
