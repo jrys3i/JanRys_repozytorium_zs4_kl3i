@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="a">
+        <input type="text" name="b">
+        <input type="text" name="c">
+        <button type="submit">Pokaż</button>
+    </form>
+    <script>
+            document.write("Jaki rodzaj działania?<br>")
+           document.write("Dodawanie to 1 <br>")
+           document.write("Odejmowanie to 2 <br>")
+           document.write("Dzielenie to 3 <br>")
+           document.write("Mnożenie to 4 <br>")
+        function dodawanie(b,c){
+            return b+c;
+        }
+        function odejmowanie(b,c){
+            return b-c;
+        }
+        function mnozenie(b,c){
+            return b*c;
+        }
+        function dzielenie(b,c){
+            return b/c;
+        }
+
+        const formularz = document.querySelector('form');
+        const g = document.querySelector('.a');
+        
+        formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+            const c = document.querySelector('input[name="c"]').value*1;
+
+       switch(a){
+        case 1:
+            document.write('Dodwanie wynosi:' + dodawanie(b,c));
+            break;
+        case 2:
+            document.write('Dodwanie wynosi:' + odejmowanie(b,c));
+            break;
+        case 3:
+            document.write('Dodwanie wynosi:' + dzielenie(b,c));
+            break;
+        case 4:
+            document.write('Dodwanie wynosi:' + mnozenie(b,c));
+            break;
+
+       }
+    });
+    </script>
+</body>
+</html>
