@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" name="h">
+        <input type="text" name="a">
+        <input type="text" name="b">
+        <input type="text" name="c">
+        <button type="submit">Pokaż</button>
+    </form>
+    <script>
+            document.write("Rosnąco czy malejąco?<br>")
+           document.write("Rosnąco to 1 <br>")
+           document.write("Malejąco to 2 <br>")
+        
+
+
+        const formularz = document.querySelector('form');
+        const g = document.querySelector('.h');
+        
+        formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const h = document.querySelector('input[name="h"]').value*1;
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+            const c = document.querySelector('input[name="c"]').value*1;
+
+       switch(h){
+        case 1:
+            if(a < b && a < c && b < c)
+            {
+            document.write(a, b, c );
+            break;
+            }
+            else if(b < a && b < c && a < c)
+            {
+            document.write(b, a, c);
+            break;
+            }
+            else (c < a && c < b && b < a)
+            {
+            document.write(c, a, b);
+            break;
+            }
+        case 2:
+        if(a < b && a < c && b < c)
+            {
+            document.write(c, b, a );
+            break;
+            }
+            else if(b < a && b < c && a < c)
+            {
+            document.write(b, a, c);
+            break;
+            }
+            else (c < a && c < b && b < a)
+            {
+            document.write(c, a, b);
+            break;
+            }
+            
+
+       }
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form>
+        <input type="text" name="a">
+        <input type="text" name="b">
+        <input type="text" name="c">
+
+        <button type="submit">Pokaż</button>
+    </form>
+    <div class="wynik"></div>
+        <script>
+            const formularz = document.querySelector('form');
+           
+        
+            formularz.addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const a = document.querySelector('input[name="a"]').value*1;
+            const b = document.querySelector('input[name="b"]').value*1;
+            const c = document.querySelector('input[name="c"]').value*1;
+            
+              
+                   const wynik = document.querySelector('.wynik'); 
+                
+               if(a > b && a > c)
+               {
+                wynik.textContent = ("najwieksza liczba to: " + a);
+               }
+                else if ((b > a) && (b > c))
+                {
+                    wynik.textContent = ("najwieksza liczba to: " + b);
+                }
+                else if ((c > a) && (c > b))
+                {
+                    wynik.textContent = ("najwieksza liczba to: " + c);
+                }
+                else if((a == b) && (a == c))
+                {
+                    wynik.textContent = ("liczby są równe" );
+                }
+            });   
+        </script>
+    
+</body>
+</html>
