@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            position: absolute;
+            left: 300px;
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="">
+
+        <label for="">Wpisz wartość koloru czerwonego:</label>
+        <input type="number" name="red" id="red"><br>
+        <label for="">Wpisz wartość koloru zielonego:</label>
+        <input type="number" name="green" id="green"><br>
+        <label for="">Wpisz wartość koloru niebieskiego:</label>
+        <input type="number" name="blue" id="blue"><br>
+        
+        <input class="przycisk" type="submit" value="zmiana">
+    </form>
+    <script>
+        const formularz = document.querySelector('form');
+        const inputred = document.querySelector('input[name="red"]');
+        const inputgreen = document.querySelector('input[name="green"]');
+        const inputblue = document.querySelector('input[name="blue"]');
+        
+        formularz.addEventListener('submit', function(e){
+            e.preventDefault();
+            const red = inputred.value;
+            const tekstr = 255 - red;
+            const green = inputgreen.value;
+            const tekstg = 255 - green;
+            const blue = inputblue.value;
+            const tekstb = 255 - blue;
+            
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            document.body.style.color = `rgb(${tekstr}, ${tekstg}, ${tekstb})`;
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body{
+    background-color: royalblue;
+    color: cyan;
+}
+h2{
+    text-align: center;
+    color: purple;
+}
+/* menu */
+.menuitems {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+.menu {
+    display: block;
+    color: cyan;
+    text-align: center;
+    padding: 10px 12px;
+    text-decoration: none;
+}
+.menu:hover {
+    background-color: black;
+}
+
+/* tekst */
+.services{
+    display: flex;
+}
+.services-wrapper1{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: blueviolet;
+}
+.services-wrapper2{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: blueviolet;
+}
+.services-wrapper3{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    background-color: blueviolet;
+}
