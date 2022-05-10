@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>strona</title>
+</head>
+<body>
+
+
+   <script src="klasa.js"></script>
+   <script src="komis.js"></script>
+   <script>
+      
+
+         const audi = new samochod('audi','A3',12000,2003,15);
+         const toyota= new samochod('toyota','supra mk4',19000,2000,8);
+    
+    console.log(audi);
+    console.log(toyota);
+    
+    const scam = new komis('scam');
+        console.log(scam);
+        scam.dodajSamochod(toyota);
+        console.log(scam);
+        scam.dodajSamochod(audi);
+        console.log(scam);
+
+        const ford= new samochod('ford','fusion',9000,2006,11);
+
+
+        scam.wyswietlSamochody();
+   </script>
+</body>
+</html>

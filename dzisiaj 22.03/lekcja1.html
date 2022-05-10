@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .naglowek{
+            color: orchid;
+            font-family: arial;
+        }
+        .div{
+            color: palegreen;
+            background-color: peru;
+        }
+        .p1{
+            text-decoration: dotted;
+            
+        }
+        .p2{
+            font-size: 30px;
+        }
+        .zmiana{
+            font-size: 50px;
+            color: royalblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="naglowek">naglowek</h1>
+    <div class="div">div</div>
+    <p class="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae id cumque voluptatibus sequi, cum ipsa quis explicabo dolor suscipit sunt excepturi nulla sit laudantium atque incidunt, dolorum reprehenderit corrupti obcaecati?</p>
+    <p class="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti voluptatibus suscipit odit nisi odio praesentium! Ab, ducimus! Temporibus delectus exercitationem voluptatum ratione rerum sunt, minus, omnis voluptate iusto facere fugiat.</p>
+    <script>
+        const naglowek = document.querySelector('h1.naglowek');
+        const div = document.querySelector('div.div');
+        const ankiety = document.querySelectorAll('p');
+        div.classList.add('zmiana');
+        const nowyh2 = document.createElement('h2');
+        nowyh2.textContent = 'jhsafjklgbahfdjabsfd'; 
+        ankiety[1].appendChild(nowyh2);
+    </script>
+</body>
+</html>
