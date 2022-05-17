@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <form action="">
+            <!-- kolory -->
+            <label for="">Wpisz wartość koloru czcionki:</label>
+            <input type="number" name="font" id="font"><br>
+            <label for="">Wpisz wartość koloru tła:</label>
+            <input type="number" name="tlo" id="tlo"><br>
+            <label for="">Wpisz wartość czcionki:</label>
+            <input type="number" name="czcionka" id="czcionka"><br>
+            
+            <!-- tekst -->
+            <label for="">Wpisz jaka to okazja:</label>
+            <input type="text" name="okazja" id="okazja"><br>
+            <!-- dane -->
+            <label for="">Wpisz tereść zaproszenia:</label>
+            <input type="text" name="tresc" id="tresc"><br>
+            <label for="">Wpisz dane:</label>
+            <input type="text" name="dane" id="dane"><br>
+
+            <input class="przycisk" type="submit" value="zmiana">
+        </form>
+    <div> </div>
+</head>
+<body>
+    <script>
+        
+       const formularz = document.querySelector('form');
+        const inputfont = document.querySelector('input[name="font"]');
+        const inputtlo = document.querySelector('input[name="tlo"]');
+        const inputblue = document.querySelector('input[name="czcionka"]');
+
+        const inputtekst = document.querySelector('input[name="okazja"]');
+        const div = document.querySelector('div')
+        formularz.addEventListener('submit', function(e){
+            e.preventDefault();
+            const font = inputfont.value;
+            const tekstr = 255 - font;
+            const tlo = inputtlo.value;
+            const tekstg = 255 - tlo;
+            
+            document.body.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
+            document.font.style.color =  `rgb(${tekstr}, ${tekstg}, ${tekstb})`;
+            document.font.size.color = 
+            div.textContent = inputtekst;
+        })
+
+    </script>
+    
+</body>
+</html>
