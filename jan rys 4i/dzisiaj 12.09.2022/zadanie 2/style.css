@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.banner{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+}
+.image{
+    height: 300px;
+    width: 400px;
+}
+.item{
+    width: 400px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    
+}
+.number{
+    margin-right: 20px;
+    font-size: large;
+}
+.o{
+    display: flex;
+    justify-content: space-between;
+}
